@@ -1,0 +1,22 @@
+{
+  "name": "notebooks",
+  "version": "1.0.0",
+  "description": "An AI-powered stock investment advisory system that combines historical stock data, news sentiment analysis, and machine learning to generate intelligent investment recommendations.",
+  "main": "app.js",
+  "scripts": {
+    "start":"node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rugved-Lohakare/smart-investment-advisor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Rugved-Lohakare/smart-investment-advisor/issues"
+  },
+  "homepage": "https://github.com/Rugved-Lohakare/smart-investment-advisor#readme"
+}
