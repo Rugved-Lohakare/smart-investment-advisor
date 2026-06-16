@@ -1,18 +1,34 @@
+import json
+import os
 from flask import Flask, jsonify
 from flask_cors import CORS
-import json
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/")
-def home():
-    return "API is running"
+RESULT_PATH = "result.json"
 
-@app.route("/predict")
+
+@app.route("/")
+def health():
+    return jsonify({"status": "ok"})
+
+
+@app.route("/predict", methods=["GET"])
 def predict():
-    with open("result.json") as f:
-        return jsonify(json.load(f))
+    if not os.path.exists(RESULT_PATH):
+        return jsonify({
+            "error": "result.json not found. Run: python stock.py predict"
+        }), 500
+
+    try:
+        with open(RESULT_PATH, "r") as f:
+            result = json.load(f)
+        return jsonify(result)
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(debug=True)

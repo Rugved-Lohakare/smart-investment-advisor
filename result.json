@@ -1,6 +1,7 @@
 {
-    "trend_score": 0.6879892188470319,
-    "sentiment_score": 0.5,
-    "final_score": 0.593994609423516,
-    "signal": "HOLD"
+  "date": "2026-06-15",
+  "trend_score": 0.666,
+  "sentiment_score": 0.6085,
+  "final_score": 0.6372,
+  "signal": "BUY"
 }
